@@ -1,3 +1,8 @@
 module.exports = {
-  mode: 'jit'
+  mode: 'jit',
+  theme: {
+    fontFamily: {
+     'poppins': ['Poppins', 'sans-serif']
+    }
+  }
 }
