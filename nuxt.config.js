@@ -33,6 +33,9 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    // https://google-fonts.nuxtjs.org/
+    '@nuxtjs/google-fonts'
+
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -40,6 +43,13 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
   ],
+
+  // Setup Google Fonts
+  googleFonts: {
+    families: {
+      Poppins: [400, 500, 600, 700]
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
