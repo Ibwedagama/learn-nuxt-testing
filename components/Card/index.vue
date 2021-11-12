@@ -64,7 +64,9 @@ export default {
   methods: {
     toggleFavorite() {
       this.favorite = !this.favorite
-      this.$emit('favorite', this.cardId)
+      if (this.favorite) {
+        this.$emit('favorite', this.cardId)
+      }
     },
   },
 }
