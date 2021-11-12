@@ -70,5 +70,24 @@ describe('Component: Card', () => {
     // should be change color now
     expect(button.classes()).toContain('card__button--favorite')
   })
+
+  test('should emit an event when favorite button is clicked', async () => {
+    const wrapper = mount(Card, {
+      propsData: {
+        cardId: 1,
+        title: 'my card title',
+        description: 'lorem ipsum',
+        image: 'test-image.jpg'
+      }
+    })
+
+    const button = wrapper.findComponent({ ref: 'card-button' })
+
+    await button.trigger('click')
+
+    expect(wrapper.emitted().favorite).toBeTruthy()
+    expect(wrapper.emitted().favorite[0]).toEqual([1])
+  })
+
 })
 
