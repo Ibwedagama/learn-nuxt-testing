@@ -39,7 +39,7 @@
 export default {
   name: 'Card',
   props: {
-    id: {
+    key: {
       type: [String, Number],
       required: true
     },
@@ -64,7 +64,7 @@ export default {
   methods: {
     toggleFavorite() {
       this.favorite = !this.favorite
-      this.$emit('favorite', this.id)
+      this.$emit('favorite', this.key)
     },
   },
 }
